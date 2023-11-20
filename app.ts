@@ -50,7 +50,3 @@ li.textContent = "activity name:"
     },
     options: {...}
 });
-
-switch(){
-
-}

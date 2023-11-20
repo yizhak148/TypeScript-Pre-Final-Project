@@ -47,5 +47,3 @@ new Chart("myChart", {
     },
     options: __assign({}, )
 });
-switch () {
-}
