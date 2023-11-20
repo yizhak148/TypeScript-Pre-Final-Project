@@ -1,3 +1,14 @@
+var __assign = (this && this.__assign) || function () {
+    __assign = Object.assign || function(t) {
+        for (var s, i = 1, n = arguments.length; i < n; i++) {
+            s = arguments[i];
+            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
+                t[p] = s[p];
+        }
+        return t;
+    };
+    return __assign.apply(this, arguments);
+};
 var _a;
 var myForm = document.querySelector("form[activity-tracker]");
 var activityNameinput = document.getElementById("activity-name");
@@ -17,8 +28,24 @@ var ul = document.querySelector("ul");
 var li = document.createElement("li");
 ul.appendChild(li);
 li.textContent = "activity name:";
-var myChart = new Chart("myChart", {
+//const myChart = new Chart("myChart", {
+//  type: "bar",
+// data: {},
+// options: {}
+// });
+var xValues = ["play", "workout", "eat", "sleep", "coding"];
+var yValues = [22, 38, 35, 45, 20];
+var barColors = ["red", "green", "blue", "orange", "brown"];
+new Chart("myChart", {
     type: "bar",
-    data: {},
-    options: {}
+    data: {
+        labels: xValues,
+        datasets: [{
+                backgroundColor: barColors,
+                data: yValues
+            }]
+    },
+    options: __assign({}, )
 });
+switch () {
+}
