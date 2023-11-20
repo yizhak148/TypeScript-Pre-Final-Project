@@ -14,8 +14,18 @@ function uptadejson(){
     const timejson = JSON.stringify(useractivityTime)
     sessionStorage.setItem("activity name", namejson)
     sessionStorage.setItem("activity time", timejson)
+    return
 }
 
 uptadejson()
+
+
+const ul = document.querySelector("ul") as HTMLUListElement;
+const li = document.createElement("li") as HTMLLIElement;
+
+
+
+ul.appendChild(li)
+li.textContent = "activity name:" 
 
 
