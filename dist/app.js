@@ -17,3 +17,8 @@ var ul = document.querySelector("ul");
 var li = document.createElement("li");
 ul.appendChild(li);
 li.textContent = "activity name:";
+var myChart = new Chart("myChart", {
+    type: "bar",
+    data: {},
+    options: {}
+});

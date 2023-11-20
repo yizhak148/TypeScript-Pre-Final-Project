@@ -28,4 +28,8 @@ const li = document.createElement("li") as HTMLLIElement;
 ul.appendChild(li)
 li.textContent = "activity name:" 
 
-
+const myChart = new Chart("myChart", {
+    type: "bar",
+    data: {},
+    options: {}
+  });
