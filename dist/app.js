@@ -12,32 +12,37 @@ var __assign = (this && this.__assign) || function () {
 var _a;
 var myForm = document.querySelector("form[activity-tracker]");
 var activityNameinput = document.getElementById("activity-name");
-var activitytimeinput = document.getElementById("activity-time");
-var savebtn = (_a = document.querySelector("button")) === null || _a === void 0 ? void 0 : _a.addEventListener("click", uptadejson);
+//const activitytimeinput = document.getElementById("activity-time") as HTMLInputElement;
+var activitystars = document.getElementById("datestarttime");
+var activityend = document.getElementById("dateendtime");
+var savebtn = (_a = document.querySelector("button")) === null || _a === void 0 ? void 0 : _a.addEventListener("click", creatactivity);
 var useractivityname = activityNameinput.value;
-var useractivityTime = activitytimeinput.value;
-var canvas = document.getElementById("myChart");
-canvas === null || canvas === void 0 ? void 0 : canvas.style.height;
+var useractivitystart = activitystars.value;
+var useractivityend = activityend.value;
+//const useractivityTime = activitytimeinput.value
 function uptadejson() {
     var useractivityname = activityNameinput.value;
-    var useractivityTime = activitytimeinput.value;
+    //const useractivityTime = activitytimeinput.value
     var namejson = JSON.stringify(useractivityname);
-    var timejson = JSON.stringify(useractivityTime);
+    //const timejson = JSON.stringify(useractivityTime)
     sessionStorage.setItem("activity name", namejson);
-    sessionStorage.setItem("activity time", timejson);
+    // sessionStorage.setItem("activity time", timejson)
     return;
 }
-uptadejson();
-var ul = document.querySelector("ul");
-var li = document.createElement("li");
-ul.appendChild(li);
-li.textContent = "activity name:";
+function creatactivity(useractivityend, useractivityname, useractivitystart) {
+    var ul = document.querySelector("ul");
+    var li = document.createElement("li");
+    ul.appendChild(li);
+    li.classList.add("me");
+    li.innerText = "activity name: " + useractivityname + "\n  activity start: " + useractivitystart + "\n  activity end: " + useractivityend;
+}
+;
 var currentDate = new Date().toDateString();
 console.log(currentDate);
 var xValues = ["play", "workout", "eat", "sleep", "coding"];
 var yValues = [22, 38, 35, 45, 20];
 var barColors = ["red", "green", "blue", "orange", "brown"];
-new Chart("myChart", {
+var static = new Chart("myChart", {
     type: "bar",
     data: {
         labels: xValues,
@@ -48,4 +53,3 @@ new Chart("myChart", {
     },
     options: __assign({}, )
 });
-yValues.push(useractivityTime.value);
