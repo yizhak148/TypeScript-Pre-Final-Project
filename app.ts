@@ -5,7 +5,15 @@ const activitytimeinput = document.getElementById("activity-time") as HTMLInputE
 
 const savebtn = document.querySelector("button")?.addEventListener("click", uptadejson)
 
-
+const useractivityname = activityNameinput.value
+const useractivityTime = activitytimeinput.value
+const canvas = document.getElementById("myChart");
+canvas?.style.height
+type activity = {
+  useractivityTime: number,
+  yValues: number
+  
+}
 function uptadejson(){
 
     const useractivityname = activityNameinput.value
@@ -29,17 +37,14 @@ const li = document.createElement("li") as HTMLLIElement;
 ul.appendChild(li)
 li.textContent = "activity name:" 
 
-//const myChart = new Chart("myChart", {
-  //  type: "bar",
-   // data: {},
-   // options: {}
- // });
+const currentDate = new Date().toDateString();
+console.log(currentDate);
 
-  var xValues = ["play", "workout", "eat", "sleep", "coding"];
-  var yValues = [22, 38, 35, 45, 20];
-  var barColors = ["red", "green","blue","orange","brown"];
+let xValues = ["play", "workout", "eat", "sleep", "coding"];
+let yValues:number[] = [22, 38, 35, 45, 20];
+let barColors = ["red", "green","blue","orange","brown"];
   
-  new Chart("myChart", {
+new Chart("myChart", {
     type: "bar",
     data: {
       labels: xValues,
@@ -50,3 +55,7 @@ li.textContent = "activity name:"
     },
     options: {...}
 });
+
+
+
+yValues.push(useractivityTime.value)

@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>activity tracker</title>
     <link rel="stylesheet" href="">
+    <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
+    </script>
 </head>
 <body>
     <h1>activity tracker</h1>
@@ -16,7 +19,12 @@
         <label for="activity-time">activity time</label>
         <input type="number" id="activity-time">
 
+        <label for="datetime">date start</label>
+        <input type="datetime-local" id="dateetime">
         
+        <label for="datetime">date end</label>
+        <input type="datetime-local" id="datestime">
+
         <button type="submit">save</button>
 
         <ul>
@@ -25,11 +33,7 @@
     </form>
 
     <canvas id="myChart"></canvas>
-
-    <script
-    src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
-    </script>
-
+    
     <script src="dist/app.js"></script>
 </body>
 </html>

@@ -14,6 +14,10 @@ var myForm = document.querySelector("form[activity-tracker]");
 var activityNameinput = document.getElementById("activity-name");
 var activitytimeinput = document.getElementById("activity-time");
 var savebtn = (_a = document.querySelector("button")) === null || _a === void 0 ? void 0 : _a.addEventListener("click", uptadejson);
+var useractivityname = activityNameinput.value;
+var useractivityTime = activitytimeinput.value;
+var canvas = document.getElementById("myChart");
+canvas === null || canvas === void 0 ? void 0 : canvas.style.height;
 function uptadejson() {
     var useractivityname = activityNameinput.value;
     var useractivityTime = activitytimeinput.value;
@@ -28,11 +32,8 @@ var ul = document.querySelector("ul");
 var li = document.createElement("li");
 ul.appendChild(li);
 li.textContent = "activity name:";
-//const myChart = new Chart("myChart", {
-//  type: "bar",
-// data: {},
-// options: {}
-// });
+var currentDate = new Date().toDateString();
+console.log(currentDate);
 var xValues = ["play", "workout", "eat", "sleep", "coding"];
 var yValues = [22, 38, 35, 45, 20];
 var barColors = ["red", "green", "blue", "orange", "brown"];
@@ -47,3 +48,4 @@ new Chart("myChart", {
     },
     options: __assign({}, )
 });
+yValues.push(useractivityTime.value);
