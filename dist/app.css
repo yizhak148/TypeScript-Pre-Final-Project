@@ -1,17 +1,35 @@
 * {
   margin: 0;
-  padding: 0;
+  padding: 0.2rem;
   box-sizing: border-box;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
 }
 
 body, html {
   width: 100wh;
   height: 100vh;
+  background-color: white;
+}
+
+.warpper {
+  height: 100%;
+  width: 100%;
+  margin: 0.5rem;
+  font-size: 20px;
+}
+
+h1 {
+  font-size: 2rem;
+  color: #f5b32f;
 }
 
 .me {
-  background-color: aqua;
-  height: 50px;
-  width: 80%;
+  background-color: #61ffff;
+  height: 12%;
+  width: 60%;
   list-style: none;
+  padding: 3px;
+  margin: 6px;
+  margin-inline: auto;
+  border-radius: 12px;
 }

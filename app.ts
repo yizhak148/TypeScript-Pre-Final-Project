@@ -8,9 +8,9 @@ const activityend = document.getElementById("dateendtime") as HTMLInputElement;
 
 const savebtn = document.querySelector("button")?.addEventListener("click", creatactivity)
 
-const useractivityname = activityNameinput.value
-const useractivitystart = activitystars.value
-const useractivityend = activityend.value
+let useractivityname = activityNameinput.value
+let useractivitystart = activitystars.value
+let useractivityend = activityend.value
 //const useractivityTime = activitytimeinput.value
 
 
@@ -26,11 +26,17 @@ function uptadejson(){
     return
 }
 
-function creatactivity (useractivityend, useractivityname, useractivitystart){
+function creatactivity (){
+  let useractivityname = activityNameinput.value
+  let useractivitystart = activitystars.value
+  let useractivityend = activityend.value
+  if(!useractivityname){
+    return
+  }
   const ul = document.querySelector("ul") as HTMLUListElement;
   const li = document.createElement("li") as HTMLLIElement;
-  ul.appendChild(li)
   li.classList.add("me")
+  ul.appendChild(li)
   li.innerText = `activity name: ${useractivityname}
   activity start: ${useractivitystart}
   activity end: ${useractivityend}`

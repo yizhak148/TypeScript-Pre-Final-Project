@@ -29,11 +29,17 @@ function uptadejson() {
     // sessionStorage.setItem("activity time", timejson)
     return;
 }
-function creatactivity(useractivityend, useractivityname, useractivitystart) {
+function creatactivity() {
+    var useractivityname = activityNameinput.value;
+    var useractivitystart = activitystars.value;
+    var useractivityend = activityend.value;
+    if (!useractivityname) {
+        return;
+    }
     var ul = document.querySelector("ul");
     var li = document.createElement("li");
-    ul.appendChild(li);
     li.classList.add("me");
+    ul.appendChild(li);
     li.innerText = "activity name: " + useractivityname + "\n  activity start: " + useractivitystart + "\n  activity end: " + useractivityend;
 }
 ;
