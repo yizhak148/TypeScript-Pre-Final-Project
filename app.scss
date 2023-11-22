@@ -2,13 +2,13 @@
     margin: 0;
     padding: 0.2rem;
     box-sizing: border-box;
-    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 body, html {
     width: 100wh;
     height: 100%;
-    background-color:white;
+    background-color:rgb(255, 255, 255);
 }
 .warpper{
     height: 100%;
@@ -22,7 +22,8 @@ h1{
     color: rgb(245, 179, 47);
 }
 .me {
-    background-color: rgb(97, 255, 255);
+    background-color: rgb(35, 127, 127);
+    color:rgb(24, 20, 20);
     height: 12%;
     width: 60%;
     list-style: none;
@@ -30,4 +31,21 @@ h1{
     margin: 6px;
     margin-inline: auto;
     border-radius: 12px;
+}
+
+button {
+    background-color: rgb(64, 246, 64);
+    color: white;
+    border: solid white 1px;
+    border-radius: 10px;
+    width: 4rem;
+    height: 1.75rem;
+    &:hover { 
+        background-color: rgb(28, 208, 28);
+        cursor: pointer;
+    }
+}
+ul {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.7rem;
 }
