@@ -30,9 +30,24 @@ function creatactivity (){
   let useractivityname = activityNameinput.value
   let useractivitystart = activitystars.value
   let useractivityend = activityend.value
-  if(!useractivityname){
+ 
+  const newDate = new Date();
+  const today = new Date();
+
+  //console.log(today.getMonth());
+  //console.log(newDate.getMonth());
+  //console.log(newDate.getTime())
+
+  if (today.getTime() > newDate.getTime()) {
+    console.log("past");
+  } else {
+    console.log("future")
+  };
+
+  if(!useractivityname || !useractivitystart || !useractivityend){
     return
   }
+
   const ul = document.querySelector("ul") as HTMLUListElement;
   const li = document.createElement("li") as HTMLLIElement;
   li.classList.add("me")

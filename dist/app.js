@@ -33,7 +33,19 @@ function creatactivity() {
     var useractivityname = activityNameinput.value;
     var useractivitystart = activitystars.value;
     var useractivityend = activityend.value;
-    if (!useractivityname) {
+    var newDate = new Date();
+    var today = new Date();
+    //console.log(today.getMonth());
+    //console.log(newDate.getMonth());
+    //console.log(newDate.getTime())
+    if (today.getTime() > newDate.getTime()) {
+        console.log("past");
+    }
+    else {
+        console.log("future");
+    }
+    ;
+    if (!useractivityname || !useractivitystart || !useractivityend) {
         return;
     }
     var ul = document.querySelector("ul");
