@@ -45,25 +45,6 @@ function creatactivity() {
 ;
 var currentDate = new Date().toDateString();
 console.log(currentDate);
-var ctx = document.getElementById('myChart');
-new Chart(ctx, {
-    type: 'bar',
-    data: {
-        labels: ["play", "workout", "eat", "sleep", "coding"],
-        datasets: [{
-                label: '# of Votes',
-                data: [12, 19, 3, 5, 2, 3],
-                borderWidth: 1
-            }]
-    },
-    options: {
-        scales: {
-            y: {
-                beginAtZero: true
-            }
-        }
-    }
-});
 var xValues = ["play", "workout", "eat", "sleep", "coding"];
 var yValues = [22, 38, 35, 45, 20];
 var barColors = ["red", "green", "blue", "orange", "brown"];

@@ -45,33 +45,8 @@ function creatactivity (){
 
 
 
-
-
 const currentDate = new Date().toDateString();
 console.log(currentDate);
-
-const ctx = document.getElementById('myChart')
-new Chart(ctx, {
-  type: 'bar',
-  data: {
-    labels: ["play", "workout", "eat", "sleep", "coding"],
-    datasets: [{
-      label: '# of Votes',
-      data: [12, 19, 3, 5, 2, 3],
-      borderWidth: 1
-    }]
-  },
-  options: {
-    scales: {
-      y: {
-        beginAtZero: true
-      }
-    }
-  }
-});
-
-
-
 
 
 
